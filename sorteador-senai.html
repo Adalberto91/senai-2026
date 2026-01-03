@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorteador-SENAI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 30px;
+            text-align: center;
+        }
+        textarea {
+            width: 80%;
+            height: 200px;
+            font-size: 16px;
+            padding: 10px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #resultado {
+            margin-top: 25px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>💻 Sorteador de Alunos – Programação</h1>
+    <p>Cole a lista de nomes (um por linha):</p>
+
+    <textarea id="nomes" placeholder="Exemplo:
+Adalberto Santana
+Jamile Oliveira
+Mega Cavaleiro
+Ana Paula"></textarea>
+
+    <br>
+    <button onclick="sortear()">Sortear Aluno</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function sortear() {
+            const texto = document.getElementById("nomes").value;
+            const lista = texto.split("\n").filter(nome => nome.trim() !== "");
+
+            if (lista.length === 0) {
+                alert("Insira pelo menos um nome!");
+                return;
+            }
+
+            const sorteado = lista[Math.floor(Math.random() * lista.length)];
+            document.getElementById("resultado").innerText =
+                "🎤 Aluno sorteado: " + sorteado;
+        }
+    </script>
+
+</body>
+</html>
