@@ -1,4 +1,4 @@
-**🎲 Sorteador de Alunos**
+**Sorteador de Alunos**
 
 Este projeto consiste em um sorteador simples desenvolvido para uso em sala de aula, com o objetivo de selecionar aleatoriamente alunos para responder atividades, apresentar exercícios ou participar de dinâmicas durante as aulas.
 A ferramenta auxilia na organização das atividades, promove a participação de todos os alunos de forma justa e torna o momento mais dinâmico e interativo. O sorteador utiliza uma lista de nomes previamente definida pelo professor, garantindo transparência e imparcialidade no processo de escolha.
